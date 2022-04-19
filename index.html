@@ -2,41 +2,47 @@
 <html>
 <head>
 <link rel="stylesheet" type="text/css" href="style.css" />
+<link rel="stylesheet" type="text/css" href="emojionearea.min.css" />
+<script
+  src="https://code.jquery.com/jquery-3.6.0.min.js"
+  integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+  crossorigin="anonymous"></script>
+<script src="emojionearea.min.js"></script>
 </head>
 <body style="background-color:rgb(170, 211, 230);">
   <table cellpadding="0" cellspacing="0" cellmargin="0">
     <tr id="menu">
       <td id="sides"></td>
       <td class="menuGap">
-        <img class="rose" src="images/Rose.jpg" alt="me">
+        <img class="rose" src="images/Rose.jpg">
       </td>
       <td class="MenuButton"><a href="#about" class="navButtonLink">About Me</a></td>
       <td class="menuGap">
-        <img class="rose" src="images/Rose.jpg" alt="me">
+        <img class="rose" src="images/Rose.jpg">
       </td>
       <td class="MenuButton"><a href="#photos" class="navButtonLink">My Photos</a></td>
       <td class="menuGap">
-        <img class="rose" src="images/Rose.jpg" alt="me">
+        <img class="rose" src="images/Rose.jpg">
       </td>
       <td class="MenuButton"><a href="#playlist" class="navButtonLink">My Playlist</a></td>
       <td class="menuGap">
-        <img class="rose" src="images/Rose.jpg" alt="me">
+        <img class="rose" src="images/Rose.jpg">
       </td>
       <td class="MenuButton"><a href="#like" class="navButtonLink">Like</a></td>
       <td class="menuGap">
-        <img class="rose" src="images/Rose.jpg" alt="me">
+        <img class="rose" src="images/Rose.jpg">
       </td>
       <td class="MenuButton"><a href="#qrcoder" class="navButtonLink">QR Code</a></td>
       <td class="menuGap">
-        <img class="rose" src="images/Rose.jpg" alt="me">
+        <img class="rose" src="images/Rose.jpg">
       </td>
       <td class="MenuButton"><a href="#spa" class="navButtonLink">Q&A</a></td>
       <td class="menuGap">
-        <img class="rose" src="images/Rose.jpg" alt="me">
+        <img class="rose" src="images/Rose.jpg">
       </td>
       <td class="MenuButton"><a href="#contact" class="navButtonLink">Contact Me</a></td>
       <td class="menuGap">
-        <img class="rose" src="images/Rose.jpg" alt="me">
+        <img class="rose" src="images/Rose.jpg">
       </td>
       <td id="sides"></td>
   </tr>  
@@ -123,17 +129,7 @@ How fast they grew...</br>
 <h1 style="background-color:rgb(101, 76, 189);">Scan My Code</h1>
 <br/>
 <br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
+<img src="images/qrcode.png" id="qrCodeImg" width=20% height=20%>
 <br/>
 <br/>
 </section>
@@ -143,12 +139,42 @@ How fast they grew...</br>
 <br/>
 <br/>
 <h1 style="background-color:rgb(101, 76, 189);">Ans</h1>
+<p>The diffrences between web1, web2 and web3 are:</p>
+<div class="rowAns">
+  <div class="column" style="background-color:#057a76;">
+    <h2>Web 1.0 - The Web</h2>
+    <ul>
+      <li>Static pages - Read only web</li>
+      <li>used for information sharing -> connect information</li>
+      <li>Users can not interact or comment on the page</li>
+      <li>Content is served by the companies that people consume</li>
+    </ul>
+  </div>
+  <div class="column" style="background-color:#20afaa;">
+    <h2>Web 2.0 - the Social Web</h2>
+    <ul>
+      <li>Users can interact with the web page - Read and write web</li>
+      <li>Used for interaction - connect people</li>
+      <li>Highlight user-generated content, usability and interoperability for end users</li>
+      <li>Interaction and collaboration with each other is allowed by social media dialogue as creator of user-generated content in a virtual community</li>
+    </ul>
+  </div>
+  <div class="column" style="background-color:#56f0f0;">
+    <h2>Web 3.0 - The Semantic Web</h2>
+    <ul>
+      <li>Internet of things</li>
+      <li>Used for Immersion - connect knowledge</li>
+      <li>People build applications that people can interact with, while the companies build the platforms that let them publish services</li>
+      <li>Allow for "things" or inanimate objects to be wired with proccessors & connected by sensors</li>
+      <li>Big data, AI, Cloud Computing</li>
+    </ul>
+  </div>
+</div>
 <br/>
 <br/>
+Use Case:
 <br/>
-<br/>
-<br/>
-<br/>
+
 <br/>
 <br/>
 <br/>
@@ -166,22 +192,30 @@ How fast they grew...</br>
 <br/>
 <h1 style="background-color:rgb(101, 76, 189);">Contact Me</h1>
 <br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
+<form action="mailto:leviaf@post.bgu.ac.il" method="post" enctype="text/plain">
+  Please write your email address:
+  </br>
+  <input id="fromEmail" type=”text” size=”25″ name="ContactName"><br><br>
+  Your message:
+  </br> 
+  <textarea id="mytextarea" style="display: none" rows="10" cols="10" ></textarea>
+  </br>
+  <script>
+    $(document).ready(function(){
+      $("#mytextarea").emojioneArea({
+        pickerPosition: "bottom"
+      });
+    })
+  </script> 
+  <button class="btn" type="submit">Send</button>
+</form>
+</div>
 </section>
 
+<div>
+  </br>
+  @Mor0666
+</div>
 
 <script type="text/javascript">
 $(function(){
