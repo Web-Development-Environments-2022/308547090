@@ -4,4 +4,36 @@
 	width: 100%;
 	height: 35px;
 	background: white;
+	text-align: center;
+}
+
+.imageWrapper{
+    width: 50%;
+}
+
+.galleryImage{
+    width: 100%;
+    height: 300px;
+    padding: 2px;
+}
+
+.MenuButton{
+    width: 3.71%;
+    padding: 0px;
+	background-color: rgb(172, 85, 136)
+	/* rgb(93, 63, 199)) */
+}
+
+.menuGap{
+    width: 2.1%;
+}
+
+.rose{
+	width: 100%;
+	padding: 0px;
+	margin: 0px;
+}
+
+#sides{
+	background-color: rgb(172, 85, 136)
 }
